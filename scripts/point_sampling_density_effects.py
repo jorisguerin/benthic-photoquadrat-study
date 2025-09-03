@@ -7,15 +7,14 @@ import numpy as np
 
 from src.utils import compute_proportions, compute_proportions_MC
 
-from src.samplers import generate_samples_MC_free_transects, generate_samples_MC_ND_transects, \
-                    generate_samples_MC_parallel_transects, generate_samples_MC_random, \
-                    subsample_quadrats, get_half_quadrat_samples, sample_quadrats_MC
+from src.samplers import generate_samples_MC_random, sample_quadrats_MC
 
 import matplotlib.pyplot as plt
-from matplotlib.patches import Patch
-from matplotlib.lines import Line2D
 
-from params.parameters import CLASS_PARAMS
+from params.parameters import CLASS_PARAMS, n_MC
+
+import os
+os.makedirs('figures', exist_ok=True)
 
 colors = [CLASS_PARAMS[i]['color'] for i in range(len(CLASS_PARAMS))]
 classes = [CLASS_PARAMS[i]['name'] for i in range(len(CLASS_PARAMS))]
@@ -24,7 +23,7 @@ img = np.load("data/map.npy")
 
 true_proportions = compute_proportions(img, n_classes=len(classes) - 1)
 
-n_MC_samples = int(1e4)
+n_MC_samples = int(n_MC)
 
 n_samples = 50
 quadrat_size = 0.5

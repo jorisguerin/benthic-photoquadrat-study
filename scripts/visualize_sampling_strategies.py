@@ -6,9 +6,13 @@ sys.path.append('..')  # For running from scripts/ directory
 import numpy as np
 
 from src.utils import display_map, compute_proportions, display_proportions
-from src.samplers import random_sampling_map, free_transect_sampling_map, parallel_transect_sampling_map, ND_transect_sampling_map
+from src.samplers import random_sampling_map, free_transect_sampling_map, parallel_transect_sampling_map, \
+                        ND_transect_sampling_map
 
 from params.parameters import CLASS_PARAMS
+
+import os
+os.makedirs('figures', exist_ok=True)
 
 colors = [CLASS_PARAMS[i]['color'] for i in range(len(CLASS_PARAMS))]
 classes = [CLASS_PARAMS[i]['name'] for i in range(len(CLASS_PARAMS))]

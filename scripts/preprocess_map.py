@@ -7,6 +7,9 @@ import rasterio
 import numpy as np
 import cv2
 
+import os
+os.makedirs('figures', exist_ok=True)
+
 path = "./data/map.tif"
 with rasterio.open(path) as src:
     img = src.read(1)

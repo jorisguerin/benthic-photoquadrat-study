@@ -44,3 +44,5 @@ CLASS_PARAMS = {
         'color': '#fefefe'
     }
 }
+
+n_MC = 1e4

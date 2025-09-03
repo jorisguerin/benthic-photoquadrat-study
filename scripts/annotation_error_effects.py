@@ -5,18 +5,18 @@ sys.path.append('..')  # For running from scripts/ directory
 
 import numpy as np
 
-from src.utils import compute_proportions, compute_proportions_MC, generate_scenario, analyze_mc_scenario
+from src.utils import compute_proportions, generate_scenario, analyze_mc_scenario
 
-from src.samplers import generate_samples_MC_random, \
-                    subsample_quadrats, sample_quadrats_MC, get_half_quadrat_samples, simulate_predictions_MC
+from src.samplers import generate_samples_MC_random
 
 import matplotlib.pyplot as plt
-from matplotlib.patches import Patch
-from matplotlib.lines import Line2D
 
 from tqdm import tqdm
 
-from params.parameters import CLASS_PARAMS
+from params.parameters import CLASS_PARAMS, n_MC
+
+import os
+os.makedirs('figures', exist_ok=True)
 
 colors = [CLASS_PARAMS[i]['color'] for i in range(len(CLASS_PARAMS))]
 classes = [CLASS_PARAMS[i]['name'] for i in range(len(CLASS_PARAMS))]
@@ -26,7 +26,7 @@ img = np.load("data/map.npy")
 
 true_proportions = compute_proportions(img, n_classes=len(classes) - 1)
 
-n_MC = int(1e4)  # number of simulations
+n_MC = int(n_MC)  # number of simulations
 n_quadrats = 50  # number of quadrats per simulations
 quadrat_size = 0.5  # meters
 n_points_per_quadrat = 10

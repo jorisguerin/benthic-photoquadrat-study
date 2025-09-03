@@ -160,7 +160,7 @@ def display_proportions(proportions_array, classes, column_labels, decimals=2):
     print(f"┌─{'─' * name_width}─┬{separator * (n_cols)}{'─' * (n_cols - 1)}┐")
 
     # Column headers
-    header = f"│ {"Class":<{name_width}} │"
+    header = f"│ {'Class':<{name_width}} │"
     for label in column_labels:
         header += f" {label:^{col_width - 2}} │"
     print(header)
