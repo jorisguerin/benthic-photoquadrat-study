@@ -5,8 +5,8 @@ This repository contains the complete code to reproduce the analysis from the re
 ## Installation
 
 ```bash
-git clone https://github.com/jorisguerin/benthic-cover-estimation.git
-cd benthic-cover-estimation
+git clone git@github.com:jorisguerin/benthic-photoquadrat-study.git
+cd benthic-photoquadrat-study
 
 python -m venv benthic-env
 source benthic-env/bin/activate  # Windows: venv\Scripts\activate
