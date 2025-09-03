@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Data files
+*.tif
+*.tiff
+*.npy
+*.npz
+
+# Generated outputs
+figures/*.pdf
+figures/*.png
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# System
+.DS_Store
+Thumbs.db
