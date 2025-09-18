@@ -5,7 +5,7 @@ This repository contains the complete code to reproduce the analysis from the re
 ## Installation
 
 ```bash
-git clone git@github.com:jorisguerin/benthic-photoquadrat-study.git
+git clone git@github.com:XXX/benthic-photoquadrat-study.git
 cd benthic-photoquadrat-study
 
 python -m venv benthic-env
@@ -42,9 +42,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use this code in your research, please cite our paper:
 
 ```bibtex
-@article{guerin2024benthic,
+@article{XXX,
   title={Assessing Joint Effects of Sampling Design and Annotation Quality on Benthic Cover Estimates through Monte Carlo Simulations},
-  author={Guerin, Joris and Longo, Guilherme and Nobre, Regina and Blondin, Célia and Berti-Equille, Laure and Ventura, Daniele},
+  author={Anonymous},
   journal={[UNDER REVIEW]},
   year={2025}
 }
@@ -52,4 +52,4 @@ If you use this code in your research, please cite our paper:
 
 ## Contact
 
-For questions about the code or research, please contact: joris.guerin@ird.fr
+For questions about the code or research, please contact: anonymous
